@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo Project</title>
+  <meta name="description" content="Basic HTML demo page." />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: #f5f5f7;
+      color: #1f2933;
+      line-height: 1.5;
+    }
+
+    header {
+      background: #111827;
+      color: #f9fafb;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 0.75rem;
+      padding: 1.75rem 1.75rem 1.5rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.35rem;
+    }
+
+    .card p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .info-list {
+      padding-left: 1.2rem;
+      margin: 0 0 1.25rem;
+    }
+
+    .info-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    button {
+      appearance: none;
+      border: none;
+      border-radius: 999px;
+      padding: 0.55rem 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: #2563eb;
+      color: #f9fafb;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+      transition: transform 0.12s ease, box-shadow 0.12s ease,
+        background-color 0.12s ease;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
+    }
+
+    button:active {
+      transform: translateY(0);
+      box-shadow: 0 3px 8px rgba(15, 23, 42, 0.35);
+    }
+
+    .message {
+      margin-top: 0.9rem;
+      font-size: 0.95rem;
+      color: #047857;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 1.5rem 1.75rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demo HTML Page</h1>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Welcome to your demo project</h2>
+      <p>
+        This is a basic HTML page with some simple styling and JavaScript to
+        get you started.
+      </p>
+
+      <ul class="info-list">
+        <li><strong>HTML5 boilerplate</strong> with proper meta tags.</li>
+        <li><strong>Embedded CSS</strong> for quick styling tweaks.</li>
+        <li><strong>Small JS snippet</strong> to test interactivity.</li>
+      </ul>
+
+      <button id="actionButton">Click me</button>
+      <p id="message" class="message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Built with a simple HTML boilerplate.</span>
+  </footer>
+
+  <script>
+    const button = document.getElementById("actionButton");
+    const message = document.getElementById("message");
+
+    button.addEventListener("click", () => {
+      const now = new Date();
+      message.textContent = `Button clicked at ${now.toLocaleTimeString()}.`;
+    });
+  </script>
+</body>
+</html>
